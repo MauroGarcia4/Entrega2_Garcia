@@ -249,7 +249,7 @@ Todas las páginas incluyen:
 
 ## Autor
 
-García Mauro - Enero 2025
+García Mauro - Noviembre 2025
 
 ## Notas
 
