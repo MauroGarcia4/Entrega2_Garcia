@@ -1,0 +1,30 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Archivos de editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos temporales
+*.tmp
+*.log
+*.cache
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Node modules (si se agregara en el futuro)
+node_modules/
+package-lock.json
+
+# Archivos de build
+dist/
+build/
+
