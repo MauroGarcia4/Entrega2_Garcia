@@ -1,0 +1,593 @@
+/* ========================================
+   PreEntrega2 - Estilos CSS con Consignas
+   Autor: García Mauro
+   Fecha: Enero 2025
+   ======================================== */
+
+/* ===== RESET Y CONFIGURACIÓN GENERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Box Model */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+/* ===== HEADER Y NAVEGACIÓN - BOX MODEL ===== */
+header {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    background-color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #1a252f;
+}
+
+header .logo {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+header .logo a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logo img:hover {
+    opacity: 0.8;
+}
+
+nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-toggler {
+    background-color: #3498db;
+    border: 1px solid #2980b9;
+    padding: 8px 12px;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(236, 240, 241, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+nav ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    width: auto;
+    padding: 0;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+nav ul li a {
+    width: auto;
+    padding: 5px 10px;
+    margin: 0;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+nav ul li a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+nav ul li a.active {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* ===== MAIN - CONTENIDO PRINCIPAL - BOX MODEL ===== */
+main {
+    width: 90%;
+    padding: 30px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+}
+
+/* ===== TÍTULOS - BOX MODEL ===== */
+h1 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* H1 con borde inferior para páginas internas */
+.discografia h1,
+.integrantes h1,
+.contacto h1 {
+    border-bottom: 3px solid #2c3e50;
+}
+
+h2 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #34495e;
+    text-align: center;
+}
+
+h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555555;
+}
+
+/* ===== SECCIÓN HERO CAROUSEL (HOME) - BOX MODEL ===== */
+.hero-carousel {
+    width: 100%;
+    padding: 40px;
+    margin: 0 0 40px 0;
+    background-color: #ecf0f1;
+    text-align: center;
+    border: 1px solid #bdc3c7;
+}
+
+.carousel-container {
+    width: 100%;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.carousel-container img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== SECCIÓN NOTICIAS (HOME) - FLEXBOX Y MEDIA QUERIES ===== */
+.noticias {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.noticias-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para las noticias */
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.noticia-card {
+    width: calc(33.333% - 20px);
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+}
+
+.noticia-card img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.noticia-card h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.noticia-card p {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+    text-align: left;
+}
+
+.noticia-card a {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.noticia-card a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+/* ===== SECCIÓN DISCOGRAFÍA - BOX MODEL ===== */
+.discografia {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.discos-container {
+    width: 100%;
+    padding: 0;
+    margin: 30px 0 0 0;
+    text-align: center;
+    display: grid; /* Grid para los discos */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.disco-card {
+    width: 100%;
+    padding: 20px;
+    margin: 0;
+    background-color: #ffffff;
+    border: 2px solid #bdc3c7;
+}
+
+.disco-card img {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.disco-card h2 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.disco-card p {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #555555;
+    text-align: left;
+}
+
+.disco-card a {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.disco-card a:hover {
+    text-decoration: underline;
+    color: #c0392b;
+}
+
+/* ===== SECCIÓN INTEGRANTES (BANDA) - BOX MODEL ===== */
+.integrantes {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.integrante-item {
+    width: 100%;
+    padding: 20px;
+    margin: 0 0 40px 0;
+    background-color: #fafafa;
+    border-left: 5px solid #3498db;
+}
+
+.integrante-item img {
+    width: 200px;
+    height: auto;
+    padding: 0;
+    margin: 0 20px 0 0;
+    vertical-align: top;
+}
+
+.integrante-info {
+    width: calc(100% - 240px);
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.integrante-info h2 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 5px 0;
+    font-size: 26px;
+    color: #2c3e50;
+    text-align: left;
+}
+
+.integrante-info h3 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.integrante-info p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    text-align: left;
+}
+
+/* ===== SECCIÓN DATO HISTÓRICO (BANDA) - BOX MODEL ===== */
+.dato-historico {
+    width: 100%;
+    padding: 30px;
+    margin: 30px 0 0 0;
+    background-color: #d5e8f7;
+    text-align: center;
+    border: 1px solid #a8d0f0;
+}
+
+.dato-historico h2 {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    color: #34495e;
+}
+
+.dato-historico blockquote {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #2c3e50;
+    font-style: italic;
+    text-align: center;
+}
+
+.dato-historico blockquote p {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===== SECCIÓN CONTACTO - BOX MODEL ===== */
+.contacto {
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.contacto p {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: 16px;
+    color: #666666;
+    text-align: center;
+}
+
+.formulario-contacto {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.form-group {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.form-group label {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 8px 0;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    font-size: 15px;
+    border: 1px solid #cccccc;
+    background-color: #fafafa;
+    color: #333333;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    margin: 0;
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* ===== FOOTER - BOX MODEL ===== */
+footer {
+    width: 100%;
+    padding: 30px;
+    margin: 40px 0 0 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    border-top: 2px solid #1a252f;
+}
+
+footer p {
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px 0;
+    font-size: 14px;
+}
+
+.redes-sociales {
+    width: 100%;
+    padding: 0;
+    margin: 15px 0 0 0;
+}
+
+.redes-sociales a {
+    width: auto;
+    padding: 0;
+    margin: 0 10px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.redes-sociales a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.redes-sociales a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+/* ===== MEDIA QUERIES - RESPONSIVE DESIGN ===== */
+/* Mobile: 768px y menor */
+@media screen and (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .noticias-container {
+        flex-direction: column; /* Cambio a columna en móvil */
+        align-items: center;
+    }
+
+    .noticia-card {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .discos-container {
+        grid-template-columns: 1fr; /* Grid de 1 columna en móvil */
+    }
+
+    .disco-card {
+        width: 100%;
+    }
+
+    .integrante-item img {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .integrante-info {
+        width: 100%;
+        display: block;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Tablet: entre 769px y 1023px */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .noticias-container {
+        justify-content: space-around;
+    }
+
+    .noticia-card {
+        width: calc(50% - 15px);
+    }
+
+    .discos-container {
+        grid-template-columns: repeat(2, 1fr); /* Grid de 2 columnas en tablet */
+    }
+}
